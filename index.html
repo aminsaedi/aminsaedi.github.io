@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js.cookie.min.js"></script>
+
+
+    <script src="./global.js"></script>
+
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="global.css">
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- use table to divide page into three section (top-side-main) -->
+    <table class="divider" border="1" width="100%" height="100%">
+        <tr>
+            <td colspan="3" height="100px">
+                <!-- a logo on the left and login form on the right -->
+                <div class="top">
+                    <div class="logo">
+                        <img src="https://picsum.photos/100" alt="logo">
+                    </div>
+                    <div>
+                        <h1>Iran Historical Cities</h1>
+                    </div>
+                    <div>
+                        <div id="login" style="display: none;">
+                            <form action="javascript:void(0);">
+
+                                <div>
+                                    <label for="username">Username</label>
+                                    <input type="text" name="username" id="username">
+                                </div>
+                                <div>
+                                    <label for="password">Password</label>
+                                    <input type="password" name="password" id="password">
+                                </div>
+                                <input id="login_btn" class="login_btn" type="submit" value="Login">
+                            </form>
+                        </div>
+                        <div id="logout" style="display: none;">
+                            <div>Amin Saedi</div>
+                            <button id="logout_btn" class="logout_btn">Log Out</button>
+                        </div>
+                    </div>
+            </td>
+        </tr>
+        <tr>
+            <td width="200px">
+                <!-- table of content -->
+                <div class="side">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cities.html">List Of Cities</a></li>
+                        <li><a href="map.html">County Map</a></li>
+                    </ul>
+                </div>
+            </td>
+            <td style="text-align: center;">
+                <h2>Iran</h2>
+                <p>
+                    Iran, officially the Islamic Republic of Iran, is a country in Western Asia. With 82 million
+                    inhabitants, Iran is the world's 18th most populous country. It is the second-most populous
+                    Muslim-majority country (after Indonesia) and the ninth-most populous country in the world, covering
+                    a total area of 1,648,195 km2 (636,372 sq mi). Iran is bordered to the northwest by Armenia and the
+                    Republic of Azerbaijan, to the north by the Caspian Sea, to the northeast by Turkmenistan, to the
+                    east by Afghanistan and Pakistan, to the south by the Persian Gulf and the Gulf of Oman, and to the
+                    west by Turkey and Iraq. The country is separated from the rest of Asia by the Caucasus Mountains
+                    and the Alborz Mountains in the north, and the Zagros Mountains in the west. It also shares a short
+                    border with the Republic of Azerbaijan in the northwest at the Nakhchivan exclave.
+                </p>
+                <h2>List Of Cities</h2>
+                <table class="cities_table">
+                    <thead>
+                        <tr>
+                            <th>City</th>
+                            <th>Population</th>
+                            <th>Province</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tehran</td>
+                            <td>8,700,000</td>
+                            <td>Tehran</td>
+                        </tr>
+                        <tr>
+                            <td>Isfahan</td>
+                            <td>2,700,000</td>
+                            <td>Isfahan</td>
+                        </tr>
+                        <tr>
+                            <td>Shiraz</td>
+                            <td>1,700,000</td>
+                            <td>Fars</td>
+                        </tr>
+                        <tr>
+                            <td>Mashhad</td>
+                            <td>2,100,000</td>
+                            <td>Khorasan Razavi</td>
+                        </tr>
+                        <tr>
+                            <td>Tabriz</td>
+                            <td>1,700,000</td>
+                            <td>East Azerbaijan</td>
+                        </tr>
+                        <tr>
+                            <td>Yazd</td>
+                            <td>1,100,000</td>
+                            <td>Yazd</td>
+                        </tr>
+                        <tr>
+                            <td>Qom</td>
+                            <td>1,100,000</td>
+                            <td>Qom</td>
+                        </tr>
+                        <tr>
+                            <td>Kermanshah</td>
+                            <td>1,100,000</td>
+                            <td>Kermanshah</td>
+                        </tr>
+                        <tr>
+                            <td>Urmia</td>
+                            <td>1,100,000</td>
+                            <td>West Azerbaijan</td>
+                        </tr>
+                        <tr>
+                            <td>Hamadan</td>
+                            <td>1,100,000</td>
+                            <td>Hamadan</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+.divider {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+  height: 100vh;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo > img {
+  border-radius: 10px;
+}
+
+#login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login_btn {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.logout_btn {
+  width: 100%;
+  margin-top: 5px;
+  background-color: red;
+  color: white;
+  border: none;
+}
+
+.side {
+  text-align: center;
+}
+
+.side > ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side > ul > li {
+  margin: 10px 0;
+}
+
+.side > ul > li > a {
+  text-decoration: none;
+  color: blue;
+  font-size: 130%;
+}
+
+.side > ul > li > a:hover {
+  color: red;
+}
+
+/* index page styles */
