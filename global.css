@@ -58,4 +58,15 @@
   color: red;
 }
 
-/* index page styles */
+/* blinker */
+.blink {
+  animation: blinker 1s linear infinite;
+  background-color: dodgerblue;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0.2;
+    background-color: blueviolet;
+  }
+}

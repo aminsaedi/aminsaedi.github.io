@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of cities</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js.cookie.min.js"></script>
+
+
+    <script src="global.js"></script>
+
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="global.css">
+
+    <link rel="stylesheet" href="cities.css">
+</head>
+
+<body>
+    <!-- use table to divide page into three section (top-side-main) -->
+    <table class="divider" border="1" width="100%" height="100%">
+        <tr>
+            <td colspan="3" height="100px">
+                <!-- a logo on the left and login form on the right -->
+                <div class="top">
+                    <div class="logo">
+                        <img src="https://picsum.photos/100" alt="logo">
+                    </div>
+                    <div>
+                        <h1>List of cities</h1>
+                    </div>
+                    <div>
+                        <div id="login" style="display: none;">
+                            <form action="javascript:void(0);">
+
+                                <div>
+                                    <label for="username">Username</label>
+                                    <input type="text" name="username" id="username">
+                                </div>
+                                <div>
+                                    <label for="password">Password</label>
+                                    <input type="password" name="password" id="password">
+                                </div>
+                                <input id="login_btn" class="login_btn" type="submit" value="Login">
+                            </form>
+                        </div>
+                        <div id="logout" style="display: none;">
+                            <div>Amin Saedi</div>
+                            <button id="logout_btn" class="logout_btn">Log Out</button>
+                        </div>
+                    </div>
+            </td>
+        </tr>
+        <tr>
+            <td width="200px">
+                <!-- table of content -->
+                <div class="side">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cities.html">List Of Cities</a></li>
+                        <li><a href="map.html">County Map</a></li>
+                    </ul>
+                </div>
+            </td>
+            <td style="text-align: center;"></td>
+        </tr>
+    </table>
+</body>
+
+</html>
