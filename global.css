@@ -6,6 +6,10 @@
   height: 100vh;
 }
 
+td {
+  border: 1px solid darkgray;
+}
+
 .top {
   display: flex;
   justify-content: space-between;
