@@ -28,8 +28,17 @@ function showLoginForm() {
   }
 }
 
+function showAuthMenuItems() {
+  if (Cookies.get("is_logged_in") === "true") {
+    $(".auth_item").show();
+  } else {
+    $(".auth_item").hide();
+  }
+}
+
 $(document).ready(function () {
   showLoginForm();
+  showAuthMenuItems();
   $("#login_btn").click(() => login());
   $("#logout_btn").click(() => logout());
 });
