@@ -9,7 +9,7 @@ function login() {
     Cookies.set("is_logged_in", true);
     window.location.href = "index.html";
   } else {
-    alert("Invalid username or password");
+    window.location.href = "signup.html";
   }
 }
 
