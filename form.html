@@ -42,6 +42,7 @@
                 const gender = $('input[name="gender"]:checked').val();
                 const birth_date = $("#birth_date").val();
                 const message = $("#message").val();
+                const postCode = $("#postCode").val();
 
                 // first_name validation
                 if (first_name == "") {
@@ -89,6 +90,18 @@
                     return
                 }
 
+                if (postCode == "") {
+                    alert("Please enter your post code");
+                    return
+                }
+
+                // https://stackoverflow.com/a/46761018/14103836
+                // postCode regex validation
+                if (!postCode.match(/^[ABCEGHJ-NPRSTVXY]\d[ABCEGHJ-NPRSTV-Z][ -]?\d[ABCEGHJ-NPRSTV-Z]\d$/i)) {
+                    alert("Please enter a valid post code");
+                    return
+                }
+
                 // gender validation
                 if (!["male", "female"].includes(gender)) {
                     alert("Please select your gender")
@@ -119,6 +132,7 @@
                     phone,
                     city,
                     province,
+                    postCode,
                     gender,
                     birth_date,
                     message
@@ -130,6 +144,7 @@
                 Cookies.set('phone', phone);
                 Cookies.set('city', city);
                 Cookies.set('province', province);
+                Cookies.set('postCode', postCode);
                 Cookies.set("gender", gender);
                 Cookies.set('birth_date', birth_date);
                 Cookies.set('message', message);
@@ -145,6 +160,7 @@
                 Cookies.remove('phone');
                 Cookies.remove('city');
                 Cookies.remove('province');
+                Cookies.remove('postCode');
                 Cookies.remove("gender");
                 Cookies.remove("birth_date");
                 Cookies.remove("message");
@@ -169,6 +185,9 @@
             }
             if (Cookies.get('province')) {
                 $("#province").val(Cookies.get('province'));
+            }
+            if (Cookies.get('postCode')) {
+                $("#postCode").val(Cookies.get('postCode'));
             }
             if (Cookies.get("gender")) {
                 const value = Cookies.get("gender")
@@ -280,6 +299,15 @@
                                     <option value="ontario">Ontario</option>
                                     <option value="british_columbia">British Columbia</option>
                                 </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="col">
+                                    <label for="postCode">Post Code</label>
+                                    <input type="postCode" class="form-control"
+                                        placeholder="Post Code (validated using Regex)" id="postCode">
+                                </div>
                             </div>
                         </div>
                         <div class="row">
